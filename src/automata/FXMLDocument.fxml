@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="156.0" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="automata.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="156.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automata.FXMLDocumentController">
    <children>
-      <Button layoutX="95.0" layoutY="90.0" mnemonicParsing="false" onAction="#comprobarExpresion" text="Comprobar expresión" />
+      <Button fx:id="btnComprobar" layoutX="95.0" layoutY="90.0" mnemonicParsing="false" onAction="#comprobarExpresion" text="Comprobar expresión" />
       <TextField fx:id="txtExpresion" alignment="CENTER" layoutX="65.0" layoutY="38.0" prefHeight="25.0" prefWidth="192.0" promptText="Expresión" />
    </children>
 </AnchorPane>
