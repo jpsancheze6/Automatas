@@ -54,6 +54,7 @@ public class FXMLDocumentController implements Initializable {
                 //Ir a la ventana para mostrar el autómata
                 //Colocar la expresión en un archivo txt
                 RandomAccessFile raf = new RandomAccessFile("expresion.txt", "rw");
+                raf.writeInt(texto.length());
                 raf.writeChars(texto);
                 raf.close();
                 try {
@@ -82,7 +83,11 @@ public class FXMLDocumentController implements Initializable {
     private void comprobarCadena() throws IOException {
         try {
             RandomAccessFile raf = new RandomAccessFile("expresion.txt", "rw");
-            String a = raf.readLine();
+            int cont = raf.readInt();
+            String a = "";
+            for (int x = 0; x < cont; x++) {
+                a = a + raf.readChar();
+            }
             raf.close();
             lblAutomata.setText(a);
             String texto = txtCadena.getText();
