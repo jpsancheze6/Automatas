@@ -69,11 +69,27 @@ public class FXMLDocumentController implements Initializable {
         File file = new File(ruta);
         Image image = new Image(file.toURI().toString());
         imgAutomata.setImage(image);
+        Image img = imgAutomata.getImage();
+        if (img != null) {
+            double w = 0;
+            double h = 0;
+            double ratioX = imgAutomata.getFitWidth() / img.getWidth();
+            double ratioY = imgAutomata.getFitHeight() / img.getHeight();
+            double reducCoeff = 0;
+            if(ratioX >= ratioY) {
+                reducCoeff = ratioY;
+            } else {
+                reducCoeff = ratioX;
+            }
+            w = img.getWidth() * reducCoeff;
+            h = img.getHeight() * reducCoeff;
+            imgAutomata.setX((imgAutomata.getFitWidth() - w) / 2);
+            imgAutomata.setY((imgAutomata.getFitHeight() - h) / 2);
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        colocarImagen();
         colocarImagen();
         try {
             // TODO
