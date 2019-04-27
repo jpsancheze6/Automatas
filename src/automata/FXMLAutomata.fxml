@@ -9,14 +9,24 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automata.FXMLDocumentController">
-   <children>
-      <Button layoutX="300.0" layoutY="426.0" mnemonicParsing="false" onAction="#comprobarCadena" text="Comprobar cadena" />
-      <TextField fx:id="txtCadena" alignment="CENTER" layoutX="285.0" layoutY="385.0" promptText="Ingrese cadena" />
-      <Label fx:id="lblAutomata" layoutX="338.0" layoutY="14.0" text="Label">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="imgAutomata" fitHeight="324.0" fitWidth="524.0" layoutX="90.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
-   </children>
+    <children>
+        <AnchorPane fx:id="paneAutomata" prefHeight="474.0" prefWidth="704.0" visible="false">
+            <children>
+                <Button layoutX="293.0" layoutY="435.0" mnemonicParsing="false" onAction="#comprobarCadena" text="Comprobar cadena" />
+                <TextField fx:id="txtCadena" alignment="CENTER" layoutX="278.0" layoutY="397.0" promptText="Ingrese cadena" />
+                <Label fx:id="lblAutomata" layoutX="331.0" layoutY="25.0" text="Label">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="imgAutomata" fitHeight="324.0" fitWidth="524.0" layoutX="90.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <AnchorPane id="paneExpresion" fx:id="paneExpresion" layoutX="192.0" layoutY="159.0" prefHeight="156.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <Button fx:id="btnComprobar" layoutX="95.0" layoutY="90.0" mnemonicParsing="false" onAction="#comprobarExpresion" text="Comprobar expresión" />
+                <TextField fx:id="txtExpresion" alignment="CENTER" layoutX="65.0" layoutY="38.0" prefHeight="25.0" prefWidth="192.0" promptText="Expresión" />
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>
