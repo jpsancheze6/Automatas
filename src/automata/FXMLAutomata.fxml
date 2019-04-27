@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,14 +8,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automata.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="automata.FXMLDocumentController">
    <children>
-      <Button layoutX="241.0" layoutY="343.0" mnemonicParsing="false" onAction="#comprobarCadena" text="Comprobar cadena" />
-      <TextField fx:id="txtCadena" alignment="CENTER" layoutX="226.0" layoutY="290.0" promptText="Ingrese cadena" />
-      <Label fx:id="lblAutomata" layoutX="287.0" layoutY="14.0" text="Label">
+      <Button layoutX="300.0" layoutY="426.0" mnemonicParsing="false" onAction="#comprobarCadena" text="Comprobar cadena" />
+      <TextField fx:id="txtCadena" alignment="CENTER" layoutX="285.0" layoutY="385.0" promptText="Ingrese cadena" />
+      <Label fx:id="lblAutomata" layoutX="338.0" layoutY="14.0" text="Label">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <ImageView fx:id="imgAutomata" fitHeight="324.0" fitWidth="524.0" layoutX="90.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

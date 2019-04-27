@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="automata.jnlp">
-    <information>
-        <title>automata</title>
-        <vendor>JosÃ© SÃ¡nchez</vendor>
-        <description>null</description>
-        <offline-allowed/>
-    </information>
-    <update check="always"/>
-    <resources>
-        <j2se version="9.0.4+" href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="automata.jar" size="5452" download="eager"/>
-    </resources>
-    <jfx:javafx-desc width="800" height="600" main-class="automata.Automata" name="Automata"/>
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="automata.jnlp">
+  <information>
+    <title>automata</title>
+    <vendor>José Sánchez</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="automata.jar" size="9698" download="eager" />
+    <jar href="lib\automaton.jar" size="176313" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="automata.Automata"  name="automata" />
+  <update check="always"/>
 </jnlp>
-
